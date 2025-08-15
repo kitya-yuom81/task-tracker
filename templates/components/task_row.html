@@ -1,10 +1,27 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+<div class="flex items-center justify-between p-3">
+  <div class="flex items-center gap-3">
+    <!-- Toggle checkbox form -->
+    <form action="/toggle" method="post">
+      <input type="hidden" name="id" value="{{id}}" />
+      <input
+        type="checkbox"
+        {{checked}}
+        onclick="this.form.submit()"
+        class="h-4 w-4 text-slate-900 border-slate-300 rounded focus:ring-slate-500"
+      />
+    </form>
 
-</body>
-</html>
+    <!-- Task title -->
+    <span class="{{strike}}">{{title}}</span>
+  </div>
+
+  <!-- Delete button -->
+  <form action="/delete" method="post">
+    <input type="hidden" name="id" value="{{id}}" />
+    <button
+      class="text-red-600 hover:underline text-sm"
+    >
+      Delete
+    </button>
+  </form>
+</div>
