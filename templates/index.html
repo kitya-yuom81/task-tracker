@@ -1,10 +1,40 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mini Task Tracker</title>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
+<body class="bg-slate-50 text-slate-800 min-h-screen flex flex-col">
+  <main class="max-w-3xl mx-auto px-4 py-8 w-full space-y-6">
+    <h1 class="text-3xl font-bold">Mini Task Tracker</h1>
 
+    <!-- Flash message -->
+    <p class="min-h-6 text-sm text-emerald-700">{{flash}}</p>
+
+    <!-- Add form -->
+    <form action="/add" method="post" class="flex gap-2">
+      <input
+        name="title"
+        placeholder="New task title..."
+        class="flex-1 rounded-xl border border-slate-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-slate-400"
+      />
+      <button
+        class="rounded-xl bg-slate-900 text-white px-4 py-2 hover:opacity-90"
+      >
+        Add
+      </button>
+    </form>
+
+    <!-- Task list -->
+    <div class="rounded-2xl border border-slate-200 bg-white shadow-sm divide-y">
+      {{rows}}
+    </div>
+  </main>
+
+  <footer class="mt-auto py-6 text-center text-sm text-slate-500">
+    Built with pure Python + Tailwind CDN
+  </footer>
 </body>
 </html>
