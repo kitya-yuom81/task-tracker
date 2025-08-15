@@ -15,29 +15,6 @@ No frameworks, no external dependencies — runs anywhere you have Python.
 
 ---
 
-## 📂 Project Structure
-mini-task-tracker/
-├─ app/
-│ ├─ server.py # Main HTTP server
-│ ├─ routes.py # URL routes & controller logic
-│ ├─ storage.py # Load/save tasks to JSON
-│ ├─ html.py # Simple template rendering
-│ ├─ validators.py # Form input validation
-│ └─ utils.py # Helpers (IDs, parsing, HTTP response)
-│
-├─ templates/
-│ ├─ base.html
-│ ├─ index.html
-│ └─ components/
-│ └─ task_row.html
-│
-├─ data/
-│ └─ tasks.json # Task data storage
-│
-├─ run.sh # Script to run the server
-└─ README.md
-
----
 
 ## 🚀 Getting Started
 
