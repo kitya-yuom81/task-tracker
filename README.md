@@ -50,3 +50,9 @@ Clone the repository:
 ```bash
 git clone https://github.com/yourusername/mini-task-tracker.git
 cd mini-task-tracker
+
+## Run
+```bash
+bash run.sh
+# open http://localhost:8000
+
