@@ -16,7 +16,7 @@ def save_tasks(tasks: List[Dict[str, Any]])-> None:
         parents = True,
         exist_ok= True
     )
-    with open(DATA_PATH, "w", encoding="utf-8" as f:
+    with open(DATA_PATH, "w", encoding="utf-8")  as f:
         json.dump(tasks, f, ensure_ascii=False, indent=2)
 
 
