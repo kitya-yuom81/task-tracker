@@ -1,7 +1,7 @@
-from .storage import load_tasks, save_tasks
-from .html import render, render_task_rows
-from .validators import validate_task
-from .utils import new_id, http_response
+from storage import load_tasks, save_tasks
+from html import render, render_task_rows
+from validators import validate_task
+from utils import new_id, http_response
 
 def page_index(message: str = ""):
     tasks = load_tasks()
